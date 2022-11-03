@@ -23,7 +23,7 @@ public class Week02
 
         double total = 0;
         int count = 0;
-        while( count < 3)
+        while( count <= 3)
         {
             total = total + InputReader.getDouble("Enter number : ");
             count++;

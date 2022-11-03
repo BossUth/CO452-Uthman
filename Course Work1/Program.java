@@ -6,6 +6,23 @@ public class Program
     public static void main(String[] args)
     {
         System.out.println("Uthman's CW1");
+        Song burna = new Song("On the Low", "Burna Boy", 3434359);
+        burna.print();
+        Song the = new Song("Sambh", "The Prophec", 39033958);
+        the.print();
+        Song dharia = new Song("Sugar & Brownies", "Dharia", 438424053);
+        dharia.print();
+        Song shekhar = new Song("Firecracker", "Shekhar Ravjiani", 353585418);
+        shekhar.print();
+        Song bon = new Song("Livin' On a Prayer", "Bon Jovi", 689846223);
+        bon.print();
+        Song mreazi = new Song("Oh My Gawd", "Mr Eazr & Major Lazer", 53516516);
+        mreazi.print();
+
+
+
+
+
         ArrayList<Song> songs = new ArrayList<Song>();
         songs = new ArrayList<Song>();
         Song ice = new Song("Gongo Aso","9ice",100000000);
@@ -29,15 +46,20 @@ public class Program
         songs.add(gnarls);
         songs.add(richie);
         songs.add(james);
-
-
-
-
+        songs.remove(ogb);
+        
+        
         for(Song song : songs)
     {
         song.print();
     }
-        
+
+
+    System.out.println(songs.contains(james));
+    System.out.println(songs.contains(leo));
+    System.out.println(songs.get(0));
+
+
     }
 
 
