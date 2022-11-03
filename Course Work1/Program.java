@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 
+import helpers.InputReader;
+
 
 public class Program
 {
+    public static ArrayList<Song> songs;
     public static void main(String[] args)
     {
         System.out.println("Uthman's CW1");
@@ -23,7 +26,6 @@ public class Program
 
 
 
-        ArrayList<Song> songs = new ArrayList<Song>();
         songs = new ArrayList<Song>();
         Song ice = new Song("Gongo Aso","9ice",100000000);
         Song shaggy = new Song("Church Heathen", "Shaggy",5240000);
@@ -57,12 +59,27 @@ public class Program
 
     System.out.println(songs.contains(james));
     System.out.println(songs.contains(leo));
-    System.out.println(songs.get(0));
 
+
+
+    int playcount = 0;
+    playcount = InputReader.getInt("Enter Number: ");
+    findByplaycount(playcount);
 
     }
 
+    public static Song findByplaycount(int playcount)
+    {
+        for(Song song : songs)
+        {
 
+            if(song.getplaycount() > playcount)
+                 song.print();
+
+        }
+        return null;
+
+    }
     
 
 }

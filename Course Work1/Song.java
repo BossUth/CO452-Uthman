@@ -19,9 +19,10 @@ public class Song
         return null;
 
     }
-    private int getplaycount() {
+    public int getplaycount() {
         return this.playcount;
     }
+    
 
 
 
