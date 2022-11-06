@@ -22,14 +22,10 @@ public class Program
         Song mreazi = new Song("Oh My Gawd", "Mr Eazr & Major Lazer", 53516516);
         mreazi.print();
 
+        
 
 
 
-
-<<<<<<< HEAD
-        ArrayList<Song> songs = new ArrayList<Song>();
-=======
->>>>>>> c4b46d5e45af999f396dbc47dce7367007b19626
         songs = new ArrayList<Song>();
         Song ice = new Song("Gongo Aso","9ice",100000000);
         Song shaggy = new Song("Church Heathen", "Shaggy",5240000);
@@ -60,13 +56,38 @@ public class Program
         song.print();
     }
 
-<<<<<<< HEAD
-    
-        
-=======
 
     System.out.println(songs.contains(james));
     System.out.println(songs.contains(leo));
+    System.out.println(songs.contains(james));
+    int songnumber = 0 ;
+    for(Song song : songs){
+        System.out.println("No: " + songnumber + "\t");
+        song.print();
+        songnumber++;
+    }
+    String f2 = InputReader.getString("Do you want to add songs to the list? ");
+    if (f2.equalsIgnoreCase("yes")){
+        String songadd = InputReader.getString("Enter Song Name: ");
+    Song newsong = new Song(songadd);
+    songs.add(newsong);
+    for (Song i:songs) {
+        i.print();
+    }
+    }
+
+    int f3 = InputReader.getInt("Do you want to remove songs from list? ");
+    String f4 = InputReader.getString("confirm for removal " + f3 + "?");
+    if (f4.equalsIgnoreCase("yes")){
+        songs.remove(f3);
+        for(Song i : songs)
+        {
+            System.out.print("Songnumber: 0");
+            i.print();
+            System.out.println();
+        }
+    }
+   
 
 
 
@@ -74,7 +95,6 @@ public class Program
     playcount = InputReader.getInt("Enter Number: ");
     findByplaycount(playcount);
 
->>>>>>> c4b46d5e45af999f396dbc47dce7367007b19626
     }
 
     public static Song findByplaycount(int playcount)
@@ -87,8 +107,10 @@ public class Program
 
         }
         return null;
-
     }
     
+    
+
+
 
 }
